@@ -6,7 +6,8 @@ const url = 'https://dodopizza.ru/nakhodka/nahodkinskiy36';
 const http = require('http');
 
 function app(req, res) {
-  console.log(req.socket.remoteAddress)
+  let date = new Date();
+  console.log(req.socket.remoteAddress, date);
   rp(url)
   .then(function(html){
     //success!
