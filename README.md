@@ -1,4 +1,4 @@
-# Dodo Pizza Widget
+# Dodo Pizza iOS 14 Widget
 
 ## Get latest sales and discover new pizzas in a convenient widget.
 
