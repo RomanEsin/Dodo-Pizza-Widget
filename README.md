@@ -1,6 +1,6 @@
 # Dodo Pizza Widget
 
-## Get latest sales and new pizzas in a convenient widget.
+## Get latest sales and discover new pizzas in a convenient widget.
 
 Run `index.js` file from `DodoAPI` via npm on your machine.
  
