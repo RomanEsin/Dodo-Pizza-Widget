@@ -1,0 +1,503 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		305DF23624ADDBDE006E6895 /* DodoPizzaWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305DF23524ADDBDE006E6895 /* DodoPizzaWidgetApp.swift */; };
+		305DF23824ADDBDE006E6895 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305DF23724ADDBDE006E6895 /* ContentView.swift */; };
+		305DF23A24ADDBEA006E6895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 305DF23924ADDBEA006E6895 /* Assets.xcassets */; };
+		305DF23D24ADDBEA006E6895 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 305DF23C24ADDBEA006E6895 /* Preview Assets.xcassets */; };
+		305DF26324ADDC6C006E6895 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305DF24A24ADDC1B006E6895 /* WidgetKit.framework */; };
+		305DF26424ADDC6C006E6895 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305DF24C24ADDC1B006E6895 /* SwiftUI.framework */; };
+		305DF26724ADDC6C006E6895 /* DodoPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305DF26624ADDC6C006E6895 /* DodoPizza.swift */; };
+		305DF26924ADDC6E006E6895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 305DF26824ADDC6E006E6895 /* Assets.xcassets */; };
+		305DF26D24ADDC6E006E6895 /* DodoPizzaExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 305DF26224ADDC6C006E6895 /* DodoPizzaExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		305DF26B24ADDC6E006E6895 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 305DF22A24ADDBDD006E6895 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 305DF26124ADDC6C006E6895;
+			remoteInfo = DodoPizzaExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		305DF25D24ADDC1C006E6895 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				305DF26D24ADDC6E006E6895 /* DodoPizzaExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		305DF23224ADDBDE006E6895 /* DodoPizzaWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DodoPizzaWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		305DF23524ADDBDE006E6895 /* DodoPizzaWidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DodoPizzaWidgetApp.swift; sourceTree = "<group>"; };
+		305DF23724ADDBDE006E6895 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		305DF23924ADDBEA006E6895 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		305DF23C24ADDBEA006E6895 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		305DF23E24ADDBEA006E6895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		305DF24A24ADDC1B006E6895 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		305DF24C24ADDC1B006E6895 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		305DF26224ADDC6C006E6895 /* DodoPizzaExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DodoPizzaExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		305DF26624ADDC6C006E6895 /* DodoPizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DodoPizza.swift; sourceTree = "<group>"; };
+		305DF26824ADDC6E006E6895 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		305DF26A24ADDC6E006E6895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30CEF67824B15B110053DBB2 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		305DF22F24ADDBDE006E6895 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305DF25F24ADDC6C006E6895 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305DF26424ADDC6C006E6895 /* SwiftUI.framework in Frameworks */,
+				305DF26324ADDC6C006E6895 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		305DF22924ADDBDD006E6895 = {
+			isa = PBXGroup;
+			children = (
+				305DF23424ADDBDE006E6895 /* DodoPizzaWidget */,
+				305DF26524ADDC6C006E6895 /* DodoPizza */,
+				305DF24924ADDC1B006E6895 /* Frameworks */,
+				305DF23324ADDBDE006E6895 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		305DF23324ADDBDE006E6895 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				305DF23224ADDBDE006E6895 /* DodoPizzaWidget.app */,
+				305DF26224ADDC6C006E6895 /* DodoPizzaExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		305DF23424ADDBDE006E6895 /* DodoPizzaWidget */ = {
+			isa = PBXGroup;
+			children = (
+				305DF23524ADDBDE006E6895 /* DodoPizzaWidgetApp.swift */,
+				305DF23724ADDBDE006E6895 /* ContentView.swift */,
+				305DF23924ADDBEA006E6895 /* Assets.xcassets */,
+				305DF23E24ADDBEA006E6895 /* Info.plist */,
+				305DF23B24ADDBEA006E6895 /* Preview Content */,
+			);
+			path = DodoPizzaWidget;
+			sourceTree = "<group>";
+		};
+		305DF23B24ADDBEA006E6895 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				305DF23C24ADDBEA006E6895 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		305DF24924ADDC1B006E6895 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				305DF24A24ADDC1B006E6895 /* WidgetKit.framework */,
+				305DF24C24ADDC1B006E6895 /* SwiftUI.framework */,
+				30CEF67824B15B110053DBB2 /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		305DF26524ADDC6C006E6895 /* DodoPizza */ = {
+			isa = PBXGroup;
+			children = (
+				305DF26624ADDC6C006E6895 /* DodoPizza.swift */,
+				305DF26824ADDC6E006E6895 /* Assets.xcassets */,
+				305DF26A24ADDC6E006E6895 /* Info.plist */,
+			);
+			path = DodoPizza;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		305DF23124ADDBDE006E6895 /* DodoPizzaWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 305DF24124ADDBEA006E6895 /* Build configuration list for PBXNativeTarget "DodoPizzaWidget" */;
+			buildPhases = (
+				305DF22E24ADDBDE006E6895 /* Sources */,
+				305DF22F24ADDBDE006E6895 /* Frameworks */,
+				305DF23024ADDBDE006E6895 /* Resources */,
+				305DF25D24ADDC1C006E6895 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				305DF26C24ADDC6E006E6895 /* PBXTargetDependency */,
+			);
+			name = DodoPizzaWidget;
+			productName = DodoPizzaWidget;
+			productReference = 305DF23224ADDBDE006E6895 /* DodoPizzaWidget.app */;
+			productType = "com.apple.product-type.application";
+		};
+		305DF26124ADDC6C006E6895 /* DodoPizzaExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 305DF26E24ADDC6E006E6895 /* Build configuration list for PBXNativeTarget "DodoPizzaExtension" */;
+			buildPhases = (
+				305DF25E24ADDC6C006E6895 /* Sources */,
+				305DF25F24ADDC6C006E6895 /* Frameworks */,
+				305DF26024ADDC6C006E6895 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DodoPizzaExtension;
+			productName = DodoPizzaExtension;
+			productReference = 305DF26224ADDC6C006E6895 /* DodoPizzaExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		305DF22A24ADDBDD006E6895 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					305DF23124ADDBDE006E6895 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					305DF26124ADDC6C006E6895 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = 305DF22D24ADDBDD006E6895 /* Build configuration list for PBXProject "DodoPizzaWidget" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 305DF22924ADDBDD006E6895;
+			productRefGroup = 305DF23324ADDBDE006E6895 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				305DF23124ADDBDE006E6895 /* DodoPizzaWidget */,
+				305DF26124ADDC6C006E6895 /* DodoPizzaExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		305DF23024ADDBDE006E6895 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305DF23D24ADDBEA006E6895 /* Preview Assets.xcassets in Resources */,
+				305DF23A24ADDBEA006E6895 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305DF26024ADDC6C006E6895 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305DF26924ADDC6E006E6895 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		305DF22E24ADDBDE006E6895 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305DF23824ADDBDE006E6895 /* ContentView.swift in Sources */,
+				305DF23624ADDBDE006E6895 /* DodoPizzaWidgetApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305DF25E24ADDC6C006E6895 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305DF26724ADDC6C006E6895 /* DodoPizza.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		305DF26C24ADDC6E006E6895 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 305DF26124ADDC6C006E6895 /* DodoPizzaExtension */;
+			targetProxy = 305DF26B24ADDC6E006E6895 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		305DF23F24ADDBEA006E6895 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		305DF24024ADDBEA006E6895 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		305DF24224ADDBEA006E6895 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DodoPizzaWidget/DodoPizzaWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"DodoPizzaWidget/Preview Content\"";
+				DEVELOPMENT_TEAM = W9K99K5JN4;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = DodoPizzaWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RomanEsin.DodoPizzaWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		305DF24324ADDBEA006E6895 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DodoPizzaWidget/DodoPizzaWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"DodoPizzaWidget/Preview Content\"";
+				DEVELOPMENT_TEAM = W9K99K5JN4;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = DodoPizzaWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RomanEsin.DodoPizzaWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		305DF26F24ADDC6E006E6895 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W9K99K5JN4;
+				INFOPLIST_FILE = DodoPizza/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RomanEsin.DodoPizzaWidget.DodoPizza;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		305DF27024ADDC6E006E6895 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W9K99K5JN4;
+				INFOPLIST_FILE = DodoPizza/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RomanEsin.DodoPizzaWidget.DodoPizza;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		305DF22D24ADDBDD006E6895 /* Build configuration list for PBXProject "DodoPizzaWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				305DF23F24ADDBEA006E6895 /* Debug */,
+				305DF24024ADDBEA006E6895 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		305DF24124ADDBEA006E6895 /* Build configuration list for PBXNativeTarget "DodoPizzaWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				305DF24224ADDBEA006E6895 /* Debug */,
+				305DF24324ADDBEA006E6895 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		305DF26E24ADDC6E006E6895 /* Build configuration list for PBXNativeTarget "DodoPizzaExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				305DF26F24ADDC6E006E6895 /* Debug */,
+				305DF27024ADDC6E006E6895 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 305DF22A24ADDBDD006E6895 /* Project object */;
+}
