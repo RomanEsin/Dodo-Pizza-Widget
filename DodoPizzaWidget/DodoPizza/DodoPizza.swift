@@ -342,11 +342,10 @@ struct ComboMediumView: View {
                 }
                 Spacer()
                 HStack(spacing: 12) {
-                    Image("pizza")
+                    Image("combo")
                         .resizable()
                         .frame(width: 105, height: 105)
-                        .cornerRadius(50)
-                        .clipped()
+//                        .cornerRadius(50)
                         .shadow(radius: 10)
                     VStack(alignment: .leading, spacing: 8) {
                         Text(entry.name)
