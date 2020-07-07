@@ -27,7 +27,7 @@ struct Provider: TimelineProvider {
     }
 
     func timeline(with context: Context, completion: @escaping (Timeline<PizzaEntry>) -> ()) {
-        URLSession.shared.dataTask(with: URL(string: "http://192.168.1.113:9876")!) { data, _, error in
+        URLSession.shared.dataTask(with: URL(string: "https://dodo-pizza-api.herokuapp.com")!) { data, _, error in
             if let error = error {
                 print(error.localizedDescription)
             }
@@ -63,7 +63,7 @@ struct ComboProvider: TimelineProvider {
     }
 
     func timeline(with context: Context, completion: @escaping (Timeline<PizzaEntry>) -> ()) {
-        URLSession.shared.dataTask(with: URL(string: "http://192.168.1.113:9876")!) { data, _, error in
+        URLSession.shared.dataTask(with: URL(string: "https://dodo-pizza-api.herokuapp.com")!) { data, _, error in
             if let error = error {
                 print(error.localizedDescription)
             }
