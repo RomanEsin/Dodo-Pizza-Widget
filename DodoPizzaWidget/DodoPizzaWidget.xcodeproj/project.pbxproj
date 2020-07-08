@@ -58,7 +58,6 @@
 		305DF26624ADDC6C006E6895 /* DodoPizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DodoPizza.swift; sourceTree = "<group>"; };
 		305DF26824ADDC6E006E6895 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		305DF26A24ADDC6E006E6895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		30CEF67824B15B110053DBB2 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +124,6 @@
 			children = (
 				305DF24A24ADDC1B006E6895 /* WidgetKit.framework */,
 				305DF24C24ADDC1B006E6895 /* SwiftUI.framework */,
-				30CEF67824B15B110053DBB2 /* IntentsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

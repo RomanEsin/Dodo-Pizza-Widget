@@ -39,17 +39,17 @@ struct Provider: IntentTimelineProvider {
                 var objects: [Pizza]
                 switch configuration.type {
                 case .pizza:
-                    objects = response.pizzas
+                    objects = response.pizzas.shuffled()
                 case .other:
                 objects = response.other
                 case .unknown:
-                    objects = response.other
+                    objects = response.other.shuffled()
                 }
 
                 var entries: [PizzaEntry] = []
 
                 for (i, object) in objects.enumerated() {
-                    entries.append(PizzaEntry(Date() + TimeInterval(i * 60 * 30), object))
+                    entries.append(PizzaEntry(Date() + TimeInterval(i * 60 * 15), object))
                 }
 
 //                let now = Calendar.current.dateComponents(in: .current, from: Date())
@@ -86,7 +86,7 @@ struct ComboProvider: TimelineProvider {
                 var entries: [PizzaEntry] = []
 
                 for (i, pizza) in pizzas.enumerated() {
-                    entries.append(PizzaEntry(Date() + TimeInterval(i * 60 * 30), pizza))
+                    entries.append(PizzaEntry(Date() + TimeInterval(i * 60 * 15), pizza))
                 }
 
 //                let now = Calendar.current.dateComponents(in: .current, from: Date())
@@ -153,7 +153,7 @@ struct DodoPizzaEntryView : View {
             LargeView(entry: entry)
                 .widgetURL(URL(string: "https://dodopizza.ru/nakhodka/nahodkinskiy36?product=42F69F9A18084651B8555BDD96E2BA45")!)
         default:
-            Text("IDK")
+            Text("Hmmmm...")
         }
     }
 }
@@ -168,10 +168,11 @@ struct SmallView: View {
             VStack {
                 Image("pizza")
                     .resizable()
-                    .frame(width: 95, height: 95)
-                    .cornerRadius(50)
+                    .frame(width: 90, height: 90)
+                    .cornerRadius(45)
                     .clipped()
                     .shadow(radius: 10)
+                    .minimumScaleFactor(0.7)
                 //                HStack {
                 Text(entry.name)
 //                    .font(.system(size: 21, weight: .bold, design: .serif))
@@ -180,6 +181,7 @@ struct SmallView: View {
                     //                        .foregroundColor(.secondary)
                     //                        .font(.system(size: 15, weight: .bold, design: .serif))
                     //                }
+                    .lineLimit(2)
                     .minimumScaleFactor(0.6)
             }
             .padding()
