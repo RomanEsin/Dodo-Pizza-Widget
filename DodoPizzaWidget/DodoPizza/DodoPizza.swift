@@ -22,25 +22,34 @@ struct Pizza: Codable {
 }
 
 // MARK: - Provider
-struct Provider: TimelineProvider {
-    func snapshot(with context: Context, completion: @escaping (PizzaEntry) -> ()) {
+struct Provider: IntentTimelineProvider {
+    func snapshot(for configuration: ObjectTypeIntent, with context: Context, completion: @escaping (PizzaEntry) -> ()) {
         let entry = PizzaEntry(date: Date(), name: "Пепперони", description: "Лук, сыр, колбаски пепперони, томатный соус.", price: 10)
         completion(entry)
     }
 
-    func timeline(with context: Context, completion: @escaping (Timeline<PizzaEntry>) -> ()) {
+    func timeline(for configuration: ObjectTypeIntent, with context: Context, completion: @escaping (Timeline<PizzaEntry>) -> ()) {
         URLSession.shared.dataTask(with: URL(string: "https://dodo-pizza-api.herokuapp.com")!) { data, _, error in
             if let error = error {
                 print(error.localizedDescription)
             }
             guard let data = data else { return }
             do {
-                let pizzas = try JSONDecoder().decode(Response.self, from: data).pizzas.shuffled()
+                let response = try JSONDecoder().decode(Response.self, from: data)
+                var objects: [Pizza]
+                switch configuration.type {
+                case .pizza:
+                    objects = response.pizzas
+                case .other:
+                objects = response.other
+                case .unknown:
+                    objects = response.other
+                }
 
                 var entries: [PizzaEntry] = []
 
-                for (i, pizza) in pizzas.enumerated() {
-                    entries.append(PizzaEntry(Date() + TimeInterval(i * 60 * 30), pizza))
+                for (i, object) in objects.enumerated() {
+                    entries.append(PizzaEntry(Date() + TimeInterval(i * 60 * 30), object))
                 }
 
 //                let now = Calendar.current.dateComponents(in: .current, from: Date())
@@ -376,7 +385,10 @@ struct DodoPizza: Widget {
     let kind = "DodoPizza"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider(), placeholder: PlaceholderView()) { entry in
+        IntentConfiguration(kind: kind,
+                            intent: ObjectTypeIntent.self,
+                            provider: Provider(),
+                            placeholder: PlaceholderView()) { entry in
             DodoPizzaEntryView(entry: entry)
         }
         .configurationDisplayName("Рекомендации")
@@ -397,27 +409,6 @@ struct ComboWidget: Widget {
         .supportedFamilies([.systemMedium])
     }
 }
-
-//struct IntentProvider: IntentTimelineProvider {
-//    func snapshot(for configuration: Intent, with context: Context, completion: @escaping (Entry) -> ()) {
-//
-//    }
-//
-//    func timeline(for configuration: Intent, with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-//        
-//    }
-//}
-//
-//struct IntentWidget: Widget {
-//    var body: some WidgetConfiguration {
-//        IntentConfiguration(kind: "IntentWidget",
-//                            intent: <#T##INIntent.Type#>,
-//                            provider: IntentProvider(),
-//                            placeholder: PlaceholderView()) { (entry) -> _ in
-//
-//        }
-//    }
-//}
 
 // MARK: - Bundle
 @main

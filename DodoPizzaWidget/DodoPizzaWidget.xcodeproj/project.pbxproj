@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3027866324B584F400C49BBC /* DodoIntent.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3027866224B584F400C49BBC /* DodoIntent.intentdefinition */; };
+		3027866424B584F400C49BBC /* DodoIntent.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3027866224B584F400C49BBC /* DodoIntent.intentdefinition */; };
 		305DF23624ADDBDE006E6895 /* DodoPizzaWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305DF23524ADDBDE006E6895 /* DodoPizzaWidgetApp.swift */; };
 		305DF23824ADDBDE006E6895 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305DF23724ADDBDE006E6895 /* ContentView.swift */; };
 		305DF23A24ADDBEA006E6895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 305DF23924ADDBEA006E6895 /* Assets.xcassets */; };
@@ -43,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3027866224B584F400C49BBC /* DodoIntent.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = DodoIntent.intentdefinition; sourceTree = "<group>"; };
 		305DF23224ADDBDE006E6895 /* DodoPizzaWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DodoPizzaWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		305DF23524ADDBDE006E6895 /* DodoPizzaWidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DodoPizzaWidgetApp.swift; sourceTree = "<group>"; };
 		305DF23724ADDBDE006E6895 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -130,6 +133,7 @@
 		305DF26524ADDC6C006E6895 /* DodoPizza */ = {
 			isa = PBXGroup;
 			children = (
+				3027866224B584F400C49BBC /* DodoIntent.intentdefinition */,
 				305DF26624ADDC6C006E6895 /* DodoPizza.swift */,
 				305DF26824ADDC6E006E6895 /* Assets.xcassets */,
 				305DF26A24ADDC6E006E6895 /* Info.plist */,
@@ -239,6 +243,7 @@
 			files = (
 				305DF23824ADDBDE006E6895 /* ContentView.swift in Sources */,
 				305DF23624ADDBDE006E6895 /* DodoPizzaWidgetApp.swift in Sources */,
+				3027866324B584F400C49BBC /* DodoIntent.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3027866424B584F400C49BBC /* DodoIntent.intentdefinition in Sources */,
 				305DF26724ADDC6C006E6895 /* DodoPizza.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

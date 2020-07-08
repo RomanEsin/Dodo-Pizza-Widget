@@ -22,6 +22,7 @@
 	<true/>
 	<key>NSUserActivityTypes</key>
 	<array>
+		<string>ObjectTypeIntent</string>
 		<string>SelectTypeIntent</string>
 		<string>TypeIntent</string>
 	</array>
