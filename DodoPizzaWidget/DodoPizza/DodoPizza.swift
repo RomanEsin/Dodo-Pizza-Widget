@@ -10,10 +10,12 @@ import SwiftUI
 
 struct Response: Codable {
     let combos: [Pizza]
+    let pizzas: [Pizza]
     let other: [Pizza]
 }
 
 struct Pizza: Codable {
+    let id: String
     let name: String
     let description: String
     let price: Int
@@ -33,7 +35,7 @@ struct Provider: TimelineProvider {
             }
             guard let data = data else { return }
             do {
-                let pizzas = try JSONDecoder().decode(Response.self, from: data).other.shuffled()
+                let pizzas = try JSONDecoder().decode(Response.self, from: data).pizzas.shuffled()
 
                 var entries: [PizzaEntry] = []
 
