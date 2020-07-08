@@ -168,21 +168,16 @@ struct SmallView: View {
             VStack {
                 Image("pizza")
                     .resizable()
-                    .frame(width: 90, height: 90)
-                    .cornerRadius(45)
+                    .frame(maxWidth: 100, maxHeight: 100)
+                    .aspectRatio(contentMode: .fit)
                     .clipped()
                     .shadow(radius: 10)
                     .minimumScaleFactor(0.7)
-                //                HStack {
                 Text(entry.name)
 //                    .font(.system(size: 21, weight: .bold, design: .serif))
-                    .font(.system(size: 21, weight: .bold, design: .default))
-                    //                    Text("От: $10")
-                    //                        .foregroundColor(.secondary)
-                    //                        .font(.system(size: 15, weight: .bold, design: .serif))
-                    //                }
+                    .font(.system(size: 21, weight: .bold, design: .rounded))
                     .lineLimit(2)
-                    .minimumScaleFactor(0.6)
+                    .minimumScaleFactor(0.5)
             }
             .padding()
         }
@@ -211,14 +206,14 @@ struct MediumView: View {
                 HStack(spacing: 12) {
                     Image("pizza")
                         .resizable()
-                        .frame(width: 105, height: 105)
-                        .cornerRadius(50)
+                        .frame(maxWidth: 105, maxHeight: 105)
+                        .aspectRatio(contentMode: .fit)
                         .clipped()
                         .shadow(radius: 10)
                     VStack(alignment: .leading, spacing: 8) {
                         Text(entry.name)
 //                            .font(.system(size: 27, weight: .bold, design: .serif))
-                            .font(.system(size: 27, weight: .bold, design: .default))
+                            .font(.system(size: 27, weight: .bold, design: .rounded))
                             .minimumScaleFactor(0.7)
                         Text(entry.description)
                             .font(.system(.headline, design: .default))
@@ -248,28 +243,18 @@ struct LargeView: View {
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                     Spacer()
-                    //                    Text("От: $10")
-                    //                        .font(.subheadline)
-                    //                        .foregroundColor(.secondary)
                 }
                 HStack(spacing: 12) {
                     Image("pizza")
                         .resizable()
-                        .frame(width: 110, height: 110)
-                        .cornerRadius(50)
+                        .frame(maxWidth: 110, maxHeight: 110)
+                        .aspectRatio(contentMode: .fit)
                         .clipped()
                         .shadow(radius: 10)
                     VStack(spacing: 8) {
                         Text(entry.name)
 //                            .font(.system(size: 27, weight: .bold, design: .serif))
-                            .font(.system(size: 27, weight: .bold, design: .default))
-//                        HStack {
-//                            Image(systemName: "star.fill")
-//                            Image(systemName: "star.fill")
-//                            Image(systemName: "star.fill")
-//                            Image(systemName: "star.fill")
-//                            Image(systemName: "star")
-//                        }
+                            .font(.system(size: 27, weight: .bold, design: .rounded))
                     }
                     Spacer()
                 }
@@ -359,13 +344,13 @@ struct ComboMediumView: View {
                 HStack(spacing: 12) {
                     Image("combo")
                         .resizable()
-                        .frame(width: 105, height: 105)
-//                        .cornerRadius(50)
+                        .frame(maxWidth: 105, maxHeight: 105)
+                        .aspectRatio(contentMode: .fit)
                         .shadow(radius: 10)
                     VStack(alignment: .leading, spacing: 8) {
                         Text(entry.name)
 //                            .font(.system(size: 27, weight: .bold, design: .serif))
-                            .font(.system(size: 27, weight: .bold, design: .default))
+                            .font(.system(size: 27, weight: .bold, design: .rounded))
                             .minimumScaleFactor(0.7)
                         Text(entry.description)
                             .font(.system(.headline, design: .default))
