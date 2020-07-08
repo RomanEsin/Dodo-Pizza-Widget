@@ -22,6 +22,7 @@
 	<true/>
 	<key>NSUserActivityTypes</key>
 	<array>
+		<string>CombosIntent</string>
 		<string>ObjectTypeIntent</string>
 		<string>SelectTypeIntent</string>
 		<string>TypeIntent</string>

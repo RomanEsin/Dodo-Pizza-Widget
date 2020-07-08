@@ -68,13 +68,13 @@ struct Provider: IntentTimelineProvider {
 }
 
 // MARK: - Combo Provider
-struct ComboProvider: TimelineProvider {
-    func snapshot(with context: Context, completion: @escaping (PizzaEntry) -> ()) {
+struct ComboProvider: IntentTimelineProvider {
+    func snapshot(for configuration: CombosIntent, with context: Context, completion: @escaping (PizzaEntry) -> ()) {
         let entry = PizzaEntry(date: Date(), name: "Пепперони", description: "Лук, сыр, колбаски пепперони, томатный соус.", price: 10)
         completion(entry)
     }
 
-    func timeline(with context: Context, completion: @escaping (Timeline<PizzaEntry>) -> ()) {
+    func timeline(for configuration: CombosIntent, with context: Context, completion: @escaping (Timeline<PizzaEntry>) -> ()) {
         URLSession.shared.dataTask(with: URL(string: "https://dodo-pizza-api.herokuapp.com")!) { data, _, error in
             if let error = error {
                 print(error.localizedDescription)
@@ -401,7 +401,8 @@ struct DodoPizza: Widget {
 
 struct ComboWidget: Widget {
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: "Combos",
+        IntentConfiguration(kind: "Combos",
+                            intent: CombosIntent.self,
                             provider: ComboProvider(),
                             placeholder: PlaceholderView()) { entry in
             ComboMediumView(entry: entry)

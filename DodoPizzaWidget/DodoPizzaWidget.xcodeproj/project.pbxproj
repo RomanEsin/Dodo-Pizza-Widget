@@ -13,8 +13,6 @@
 		305DF23824ADDBDE006E6895 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305DF23724ADDBDE006E6895 /* ContentView.swift */; };
 		305DF23A24ADDBEA006E6895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 305DF23924ADDBEA006E6895 /* Assets.xcassets */; };
 		305DF23D24ADDBEA006E6895 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 305DF23C24ADDBEA006E6895 /* Preview Assets.xcassets */; };
-		305DF26324ADDC6C006E6895 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305DF24A24ADDC1B006E6895 /* WidgetKit.framework */; };
-		305DF26424ADDC6C006E6895 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305DF24C24ADDC1B006E6895 /* SwiftUI.framework */; };
 		305DF26724ADDC6C006E6895 /* DodoPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305DF26624ADDC6C006E6895 /* DodoPizza.swift */; };
 		305DF26924ADDC6E006E6895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 305DF26824ADDC6E006E6895 /* Assets.xcassets */; };
 		305DF26D24ADDC6E006E6895 /* DodoPizzaExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 305DF26224ADDC6C006E6895 /* DodoPizzaExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -52,8 +50,6 @@
 		305DF23924ADDBEA006E6895 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		305DF23C24ADDBEA006E6895 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		305DF23E24ADDBEA006E6895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		305DF24A24ADDC1B006E6895 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
-		305DF24C24ADDC1B006E6895 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		305DF26224ADDC6C006E6895 /* DodoPizzaExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DodoPizzaExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		305DF26624ADDC6C006E6895 /* DodoPizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DodoPizza.swift; sourceTree = "<group>"; };
 		305DF26824ADDC6E006E6895 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,8 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				305DF26424ADDC6C006E6895 /* SwiftUI.framework in Frameworks */,
-				305DF26324ADDC6C006E6895 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +79,6 @@
 			children = (
 				305DF23424ADDBDE006E6895 /* DodoPizzaWidget */,
 				305DF26524ADDC6C006E6895 /* DodoPizza */,
-				305DF24924ADDC1B006E6895 /* Frameworks */,
 				305DF23324ADDBDE006E6895 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,15 +110,6 @@
 				305DF23C24ADDBEA006E6895 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		305DF24924ADDC1B006E6895 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				305DF24A24ADDC1B006E6895 /* WidgetKit.framework */,
-				305DF24C24ADDC1B006E6895 /* SwiftUI.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		305DF26524ADDC6C006E6895 /* DodoPizza */ = {
