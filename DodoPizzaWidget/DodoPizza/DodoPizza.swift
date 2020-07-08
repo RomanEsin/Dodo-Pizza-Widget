@@ -38,15 +38,16 @@ struct Provider: TimelineProvider {
                 var entries: [PizzaEntry] = []
 
                 for (i, pizza) in pizzas.enumerated() {
-                    entries.append(PizzaEntry(Date() + TimeInterval(i * 60), pizza))
+                    entries.append(PizzaEntry(Date() + TimeInterval(i * 60 * 30), pizza))
                 }
 
-                let now = Calendar.current.dateComponents(in: .current, from: Date())
+//                let now = Calendar.current.dateComponents(in: .current, from: Date())
 
-                let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1)
-                let dateTomorrow = Calendar.current.date(from: tomorrow)!
+//                let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1)
+//                let dateTomorrow = Calendar.current.date(from: tomorrow)!
 
-                completion(Timeline(entries: entries, policy: .after(dateTomorrow)))
+//                completion(Timeline(entries: entries, policy: .after(dateTomorrow)))
+                completion(Timeline(entries: entries, policy: .atEnd))
             } catch {
                 print(error)
             }
@@ -74,15 +75,16 @@ struct ComboProvider: TimelineProvider {
                 var entries: [PizzaEntry] = []
 
                 for (i, pizza) in pizzas.enumerated() {
-                    entries.append(PizzaEntry(Date() + TimeInterval(i * 60), pizza))
+                    entries.append(PizzaEntry(Date() + TimeInterval(i * 60 * 30), pizza))
                 }
 
-                let now = Calendar.current.dateComponents(in: .current, from: Date())
+//                let now = Calendar.current.dateComponents(in: .current, from: Date())
 
-                let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1)
-                let dateTomorrow = Calendar.current.date(from: tomorrow)!
+//                let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1)
+//                let dateTomorrow = Calendar.current.date(from: tomorrow)!
 
-                completion(Timeline(entries: entries, policy: .after(dateTomorrow)))
+//                completion(Timeline(entries: entries, policy: .after(dateTomorrow)))
+                completion(Timeline(entries: entries, policy: .atEnd))
             } catch {
                 print(error)
             }
@@ -383,7 +385,9 @@ struct DodoPizza: Widget {
 
 struct ComboWidget: Widget {
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: "Combos", provider: ComboProvider(), placeholder: PlaceholderView()) { entry in
+        StaticConfiguration(kind: "Combos",
+                            provider: ComboProvider(),
+                            placeholder: PlaceholderView()) { entry in
             ComboMediumView(entry: entry)
         }
         .configurationDisplayName("Комбо")
@@ -391,6 +395,27 @@ struct ComboWidget: Widget {
         .supportedFamilies([.systemMedium])
     }
 }
+
+//struct IntentProvider: IntentTimelineProvider {
+//    func snapshot(for configuration: Intent, with context: Context, completion: @escaping (Entry) -> ()) {
+//
+//    }
+//
+//    func timeline(for configuration: Intent, with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+//        
+//    }
+//}
+//
+//struct IntentWidget: Widget {
+//    var body: some WidgetConfiguration {
+//        IntentConfiguration(kind: "IntentWidget",
+//                            intent: <#T##INIntent.Type#>,
+//                            provider: IntentProvider(),
+//                            placeholder: PlaceholderView()) { (entry) -> _ in
+//
+//        }
+//    }
+//}
 
 // MARK: - Bundle
 @main
