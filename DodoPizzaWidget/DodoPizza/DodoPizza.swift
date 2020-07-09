@@ -15,6 +15,7 @@ struct Response: Codable {
 }
 
 struct Pizza: Codable {
+    let img: String?
     let id: String
     let name: String
     let description: String
@@ -24,7 +25,7 @@ struct Pizza: Codable {
 // MARK: - Provider
 struct Provider: IntentTimelineProvider {
     func snapshot(for configuration: ObjectTypeIntent, with context: Context, completion: @escaping (PizzaEntry) -> ()) {
-        let entry = PizzaEntry(date: Date(), name: "Пепперони", description: "Лук, сыр, колбаски пепперони, томатный соус.", price: 10)
+        let entry = PizzaEntry(date: Date(), image: UIImage(named: "pizza")!, name: "Пепперони", description: "Лук, сыр, колбаски пепперони, томатный соус.", price: 10)
         completion(entry)
     }
 
@@ -41,7 +42,7 @@ struct Provider: IntentTimelineProvider {
                 case .pizza:
                     objects = response.pizzas.shuffled()
                 case .other:
-                objects = response.other
+                    objects = response.other
                 case .unknown:
                     objects = response.other.shuffled()
                 }
@@ -70,7 +71,7 @@ struct Provider: IntentTimelineProvider {
 // MARK: - Combo Provider
 struct ComboProvider: IntentTimelineProvider {
     func snapshot(for configuration: CombosIntent, with context: Context, completion: @escaping (PizzaEntry) -> ()) {
-        let entry = PizzaEntry(date: Date(), name: "Пепперони", description: "Лук, сыр, колбаски пепперони, томатный соус.", price: 10)
+        let entry = PizzaEntry(date: Date(), image: UIImage(named: "pizza")!, name: "Пепперони", description: "Лук, сыр, колбаски пепперони, томатный соус.", price: 10)
         completion(entry)
     }
 
@@ -107,20 +108,28 @@ struct ComboProvider: IntentTimelineProvider {
 // MARK: - Pizza Entry
 struct PizzaEntry: TimelineEntry {
     let date: Date
-    
+
+    let image: UIImage
     let name: String
     let description: String
     let price: Int
 
-    init(date: Date, name: String, description: String, price: Int) {
+    init(date: Date, image: UIImage, name: String, description: String, price: Int) {
         self.date = date
+        self.image = image
         self.name = name
         self.description = description
         self.price = price
     }
 
     init(_ date: Date, _ pizza: Pizza) {
-        self.init(date: date, name: pizza.name, description: pizza.description, price: pizza.price)
+        let image: UIImage
+        if let url = pizza.img {
+            image = UIImage(data: try! Data(contentsOf: URL(string: url)!))!
+        } else {
+            image = UIImage(named: "pizza")!
+        }
+        self.init(date: date, image: image, name: pizza.name, description: pizza.description, price: pizza.price)
     }
 }
 
@@ -166,7 +175,7 @@ struct SmallView: View {
         ZStack {
             Color(.displayP3, red: 238 / 255, green: 114 / 255, blue: 45 / 255, opacity: 1)
             VStack {
-                Image("pizza")
+                Image(uiImage: entry.image)
                     .resizable()
                     .frame(maxWidth: 100, maxHeight: 100)
                     .aspectRatio(contentMode: .fit)
@@ -204,7 +213,7 @@ struct MediumView: View {
                 }
                 Spacer()
                 HStack(spacing: 12) {
-                    Image("pizza")
+                    Image(uiImage: entry.image)
                         .resizable()
                         .frame(maxWidth: 105, maxHeight: 105)
                         .aspectRatio(contentMode: .fit)
@@ -245,7 +254,7 @@ struct LargeView: View {
                     Spacer()
                 }
                 HStack(spacing: 12) {
-                    Image("pizza")
+                    Image(uiImage: entry.image)
                         .resizable()
                         .frame(maxWidth: 110, maxHeight: 110)
                         .aspectRatio(contentMode: .fit)
@@ -342,7 +351,7 @@ struct ComboMediumView: View {
                 }
                 Spacer()
                 HStack(spacing: 12) {
-                    Image("combo")
+                    Image(uiImage: entry.image)
                         .resizable()
                         .frame(maxWidth: 105, maxHeight: 105)
                         .aspectRatio(contentMode: .fit)
@@ -413,16 +422,19 @@ struct DodoPizza_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             DodoPizzaEntryView(entry: PizzaEntry(date: Date(),
+                                                 image: UIImage(named: "pizza")!,
                                                  name: "Пепперони",
                                                  description: "лук, сыр, колбаски пепперони, томатный соус",
                                                  price: 10))
                 .previewContext(WidgetPreviewContext(family: .systemSmall))
             DodoPizzaEntryView(entry: PizzaEntry(date: Date(),
+                                                 image: UIImage(named: "pizza")!,
                                                  name: "Пепперони",
                                                  description: "лук, сыр, колбаски пепперони, томатный соус",
                                                  price: 10))
                 .previewContext(WidgetPreviewContext(family: .systemMedium))
             DodoPizzaEntryView(entry: PizzaEntry(date: Date(),
+                                                 image: UIImage(named: "pizza")!,
                                                  name: "Пепперони",
                                                  description: "лук, сыр, колбаски пепперони, томатный соус",
                                                  price: 10))
