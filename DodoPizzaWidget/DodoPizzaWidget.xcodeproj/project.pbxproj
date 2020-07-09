@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		3027866324B584F400C49BBC /* DodoIntent.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3027866224B584F400C49BBC /* DodoIntent.intentdefinition */; };
 		3027866424B584F400C49BBC /* DodoIntent.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3027866224B584F400C49BBC /* DodoIntent.intentdefinition */; };
+		3029AF4124B7353D003F0324 /* WidgetNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3029AF3F24B7353A003F0324 /* WidgetNetwork.swift */; };
+		3029AF4424B735EF003F0324 /* RecommendedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3029AF4224B735EC003F0324 /* RecommendedView.swift */; };
+		3029AF4724B7364F003F0324 /* ComboView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3029AF4524B73649003F0324 /* ComboView.swift */; };
+		3029AF4C24B736BE003F0324 /* ComboWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3029AF4A24B7368E003F0324 /* ComboWidget.swift */; };
+		3029AF4E24B736ED003F0324 /* RecommendedWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3029AF4D24B736ED003F0324 /* RecommendedWidget.swift */; };
 		305DF23624ADDBDE006E6895 /* DodoPizzaWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305DF23524ADDBDE006E6895 /* DodoPizzaWidgetApp.swift */; };
 		305DF23824ADDBDE006E6895 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305DF23724ADDBDE006E6895 /* ContentView.swift */; };
 		305DF23A24ADDBEA006E6895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 305DF23924ADDBEA006E6895 /* Assets.xcassets */; };
@@ -44,6 +49,11 @@
 
 /* Begin PBXFileReference section */
 		3027866224B584F400C49BBC /* DodoIntent.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = DodoIntent.intentdefinition; sourceTree = "<group>"; };
+		3029AF3F24B7353A003F0324 /* WidgetNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetNetwork.swift; sourceTree = "<group>"; };
+		3029AF4224B735EC003F0324 /* RecommendedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedView.swift; sourceTree = "<group>"; };
+		3029AF4524B73649003F0324 /* ComboView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComboView.swift; sourceTree = "<group>"; };
+		3029AF4A24B7368E003F0324 /* ComboWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComboWidget.swift; sourceTree = "<group>"; };
+		3029AF4D24B736ED003F0324 /* RecommendedWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedWidget.swift; sourceTree = "<group>"; };
 		305DF23224ADDBDE006E6895 /* DodoPizzaWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DodoPizzaWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		305DF23524ADDBDE006E6895 /* DodoPizzaWidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DodoPizzaWidgetApp.swift; sourceTree = "<group>"; };
 		305DF23724ADDBDE006E6895 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +84,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3029AF4824B73662003F0324 /* Combo */ = {
+			isa = PBXGroup;
+			children = (
+				3029AF4A24B7368E003F0324 /* ComboWidget.swift */,
+				3029AF4524B73649003F0324 /* ComboView.swift */,
+			);
+			path = Combo;
+			sourceTree = "<group>";
+		};
+		3029AF4924B73668003F0324 /* Recommended */ = {
+			isa = PBXGroup;
+			children = (
+				3029AF4D24B736ED003F0324 /* RecommendedWidget.swift */,
+				3029AF4224B735EC003F0324 /* RecommendedView.swift */,
+			);
+			path = Recommended;
+			sourceTree = "<group>";
+		};
 		305DF22924ADDBDD006E6895 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +145,9 @@
 			children = (
 				3027866224B584F400C49BBC /* DodoIntent.intentdefinition */,
 				305DF26624ADDC6C006E6895 /* DodoPizza.swift */,
+				3029AF3F24B7353A003F0324 /* WidgetNetwork.swift */,
+				3029AF4824B73662003F0324 /* Combo */,
+				3029AF4924B73668003F0324 /* Recommended */,
 				305DF26824ADDC6E006E6895 /* Assets.xcassets */,
 				305DF26A24ADDC6E006E6895 /* Info.plist */,
 			);
@@ -233,8 +264,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3029AF4C24B736BE003F0324 /* ComboWidget.swift in Sources */,
+				3029AF4E24B736ED003F0324 /* RecommendedWidget.swift in Sources */,
 				3027866424B584F400C49BBC /* DodoIntent.intentdefinition in Sources */,
+				3029AF4424B735EF003F0324 /* RecommendedView.swift in Sources */,
+				3029AF4724B7364F003F0324 /* ComboView.swift in Sources */,
 				305DF26724ADDC6C006E6895 /* DodoPizza.swift in Sources */,
+				3029AF4124B7353D003F0324 /* WidgetNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
