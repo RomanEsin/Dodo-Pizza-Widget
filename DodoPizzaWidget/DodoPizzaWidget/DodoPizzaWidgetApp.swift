@@ -11,11 +11,7 @@ import SwiftUI
 struct DodoPizzaWidgetApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView().onOpenURL { (url) in
-                UIApplication.shared.open(url, options: [:], completionHandler: { _ in 
-                    print(123)
-                })
-            }
+            ContentView()
         }
     }
 }
