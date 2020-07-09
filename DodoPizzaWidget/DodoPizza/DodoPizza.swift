@@ -109,10 +109,15 @@ struct ComboProvider: IntentTimelineProvider {
 struct PizzaEntry: TimelineEntry {
     let date: Date
 
+    var id: String
     let image: UIImage
     let name: String
     let description: String
     let price: Int
+
+    var url: URL {
+        URL(string: "https://dodopizza.ru/nakhodka/nahodkinskiy36?product=\(id)")!
+    }
 
     init(date: Date, image: UIImage, name: String, description: String, price: Int) {
         self.date = date
@@ -120,6 +125,7 @@ struct PizzaEntry: TimelineEntry {
         self.name = name
         self.description = description
         self.price = price
+        self.id = ""
     }
 
     init(_ date: Date, _ pizza: Pizza) {
@@ -131,6 +137,7 @@ struct PizzaEntry: TimelineEntry {
             image = UIImage(named: "pizza")!
         }
         self.init(date: date, image: image, name: pizza.name, description: pizza.description, price: pizza.price)
+        self.id = pizza.id
     }
 }
 
@@ -156,12 +163,11 @@ struct DodoPizzaEntryView : View {
         switch family {
         case .systemSmall:
             SmallView(entry: entry)
+                .widgetURL(entry.url)
         case .systemMedium:
             MediumView(entry: entry)
-                .widgetURL(URL(string: "https://dodopizza.ru/nakhodka/nahodkinskiy36?product=42F69F9A18084651B8555BDD96E2BA45")!)
         case .systemLarge:
             LargeView(entry: entry)
-                .widgetURL(URL(string: "https://dodopizza.ru/nakhodka/nahodkinskiy36?product=42F69F9A18084651B8555BDD96E2BA45")!)
         default:
             Text("Hmmmm...")
         }
@@ -185,7 +191,7 @@ struct SmallView: View {
                     .shadow(radius: 10)
                     .minimumScaleFactor(0.7)
                 Text(entry.name)
-//                    .font(.system(size: 21, weight: .bold, design: .serif))
+                    //                    .font(.system(size: 21, weight: .bold, design: .serif))
                     .font(.system(size: 21, weight: .bold, design: .rounded))
                     .lineLimit(2)
                     .minimumScaleFactor(0.3)
@@ -203,40 +209,42 @@ struct MediumView: View {
     var body: some View {
         ZStack {
             Color(.displayP3, red: 238 / 255, green: 114 / 255, blue: 45 / 255, opacity: 1)
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("Рекоменация")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
-                    Spacer()
-                    Text("От: \(entry.price)₽")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
-                }
-                Spacer()
-                HStack(spacing: 12) {
-                    Image(uiImage: entry.image)
-                        .resizable()
-                        .cornerRadius(16)
-                        .frame(maxWidth: 105, maxHeight: 105)
-                        .aspectRatio(contentMode: .fit)
-                        .clipped()
-                        .shadow(radius: 10)
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text(entry.name)
-//                            .font(.system(size: 27, weight: .bold, design: .serif))
-                            .font(.system(size: 27, weight: .bold, design: .rounded))
-                            .minimumScaleFactor(0.7)
-                        Text(entry.description)
-                            .font(.system(.headline, design: .default))
+            Link(destination: entry.url) {
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("Рекоменация")
+                            .font(.subheadline)
                             .foregroundColor(.secondary)
-                            .multilineTextAlignment(.leading)
-                            .minimumScaleFactor(0.7)
-                            .lineLimit(3)
+                        Spacer()
+                        Text("От: \(entry.price)₽")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                    Spacer()
+                    HStack(spacing: 12) {
+                        Image(uiImage: entry.image)
+                            .resizable()
+                            .cornerRadius(16)
+                            .frame(maxWidth: 105, maxHeight: 105)
+                            .aspectRatio(contentMode: .fit)
+                            .clipped()
+                            .shadow(radius: 10)
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text(entry.name)
+//                            .font(.system(size: 27, weight: .bold, design: .serif))
+                                .font(.system(size: 27, weight: .bold, design: .rounded))
+                                .minimumScaleFactor(0.7)
+                            Text(entry.description)
+                                .font(.system(.headline, design: .default))
+                                .foregroundColor(.secondary)
+                                .multilineTextAlignment(.leading)
+                                .minimumScaleFactor(0.7)
+                                .lineLimit(3)
+                        }
                     }
                 }
+                .padding()
             }
-            .padding()
         }
         .colorScheme(.dark)
     }
@@ -354,24 +362,26 @@ struct ComboMediumView: View {
                         .foregroundColor(.secondary)
                 }
                 Spacer()
-                HStack(spacing: 12) {
-                    Image(uiImage: entry.image)
-                        .resizable()
-                        .cornerRadius(16)
-                        .frame(maxWidth: 105, maxHeight: 105)
-                        .aspectRatio(contentMode: .fit)
-                        .shadow(radius: 10)
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text(entry.name)
+                Link(destination: entry.url) {
+                    HStack(spacing: 12) {
+                        Image(uiImage: entry.image)
+                            .resizable()
+                            .cornerRadius(16)
+                            .frame(maxWidth: 105, maxHeight: 105)
+                            .aspectRatio(contentMode: .fit)
+                            .shadow(radius: 10)
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text(entry.name)
 //                            .font(.system(size: 27, weight: .bold, design: .serif))
-                            .font(.system(size: 27, weight: .bold, design: .rounded))
-                            .minimumScaleFactor(0.7)
-                        Text(entry.description)
-                            .font(.system(.headline, design: .default))
-                            .foregroundColor(.secondary)
-                            .multilineTextAlignment(.leading)
-                            .minimumScaleFactor(0.7)
-                            .lineLimit(4)
+                                .font(.system(size: 27, weight: .bold, design: .rounded))
+                                .minimumScaleFactor(0.7)
+                            Text(entry.description)
+                                .font(.system(.headline, design: .default))
+                                .foregroundColor(.secondary)
+                                .multilineTextAlignment(.leading)
+                                .minimumScaleFactor(0.7)
+                                .lineLimit(4)
+                        }
                     }
                 }
             }
