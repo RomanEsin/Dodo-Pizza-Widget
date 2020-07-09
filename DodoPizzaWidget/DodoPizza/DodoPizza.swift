@@ -1,4 +1,4 @@
-
+//
 //  DodoPizza.swift
 //  DodoPizza
 //
@@ -126,6 +126,7 @@ struct PizzaEntry: TimelineEntry {
         let image: UIImage
         if let url = pizza.img {
             image = UIImage(data: try! Data(contentsOf: URL(string: url)!))!
+//            image = replaceColor(color: SKColor(red: 1, green: 1, blue: 1, alpha: 1), withColor: SKColor(red: 0, green: 0, blue: 0, alpha: 0), image: img, tolerance: 0.4)
         } else {
             image = UIImage(named: "pizza")!
         }
@@ -177,7 +178,8 @@ struct SmallView: View {
             VStack {
                 Image(uiImage: entry.image)
                     .resizable()
-                    .frame(maxWidth: 100, maxHeight: 100)
+                    .cornerRadius(16)
+                    .frame(minWidth: 70, maxWidth: 100, minHeight: 70, maxHeight: 100)
                     .aspectRatio(contentMode: .fit)
                     .clipped()
                     .shadow(radius: 10)
@@ -186,7 +188,7 @@ struct SmallView: View {
 //                    .font(.system(size: 21, weight: .bold, design: .serif))
                     .font(.system(size: 21, weight: .bold, design: .rounded))
                     .lineLimit(2)
-                    .minimumScaleFactor(0.5)
+                    .minimumScaleFactor(0.3)
             }
             .padding()
         }
@@ -215,6 +217,7 @@ struct MediumView: View {
                 HStack(spacing: 12) {
                     Image(uiImage: entry.image)
                         .resizable()
+                        .cornerRadius(16)
                         .frame(maxWidth: 105, maxHeight: 105)
                         .aspectRatio(contentMode: .fit)
                         .clipped()
@@ -256,6 +259,7 @@ struct LargeView: View {
                 HStack(spacing: 12) {
                     Image(uiImage: entry.image)
                         .resizable()
+                        .cornerRadius(16)
                         .frame(maxWidth: 110, maxHeight: 110)
                         .aspectRatio(contentMode: .fit)
                         .clipped()
@@ -353,6 +357,7 @@ struct ComboMediumView: View {
                 HStack(spacing: 12) {
                     Image(uiImage: entry.image)
                         .resizable()
+                        .cornerRadius(16)
                         .frame(maxWidth: 105, maxHeight: 105)
                         .aspectRatio(contentMode: .fit)
                         .shadow(radius: 10)
